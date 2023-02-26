@@ -1,5 +1,5 @@
 services:
-  web: 
+  web-django: 
     build:
       context: app
       target: dev-envs

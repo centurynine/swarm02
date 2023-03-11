@@ -130,24 +130,24 @@ docker stack deploy -c portainer-agent-stack.yml portainer
     ```
     version: '3.7'
     services:
-    web-django:
-        image: centurynine/swarm02-web-django:0311
-        networks:
-        - webproxy
-        logging:
-        driver: json-file
-        options:
-            "max-size": "10m"
-            "max-file": "5"
-        deploy: 
-        replicas: 1 
-        labels:
-            - traefik.docker.network=webproxy
-            - traefik.enable=true
-            - traefik.http.routers.${APPNAME}-https.entrypoints=websecure
-            - traefik.http.routers.${APPNAME}-https.rule=Host("${APPNAME}.xops.ipv9.me")
-            - traefik.http.routers.${APPNAME}-https.tls.certresolver=default
-            - traefik.http.services.${APPNAME}.loadbalancer.server.port=8000
+        web-django:
+            image: centurynine/swarm02-web-django:0311
+            networks:
+            - webproxy
+            logging:
+            driver: json-file
+            options:
+                "max-size": "10m"
+                "max-file": "5"
+            deploy: 
+            replicas: 1 
+            labels:
+                - traefik.docker.network=webproxy
+                - traefik.enable=true
+                - traefik.http.routers.${APPNAME}-https.entrypoints=websecure
+                - traefik.http.routers.${APPNAME}-https.rule=Host("${APPNAME}.xops.ipv9.me")
+                - traefik.http.routers.${APPNAME}-https.tls.certresolver=default
+                - traefik.http.services.${APPNAME}.loadbalancer.server.port=8000
             
     volumes:
     app:

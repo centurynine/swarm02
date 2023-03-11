@@ -1,7 +1,0 @@
-services:
-  web-django: 
-    build:
-      context: app
-      target: builder
-    ports: 
-      - '90:8000'

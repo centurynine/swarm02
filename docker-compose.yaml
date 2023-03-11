@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  web-php:
+    image: centurynine/swarm02-web-django:0311
+    networks:
+     - webproxy
+    logging:
+      driver: json-file
+      options:
+        "max-size": "10m"
+        "max-file": "5"
+    deploy: 
+      replicas: 1 
+      labels:
+        - traefik.docker.network=webproxy
+        - traefik.enable=true
+        - traefik.http.routers.spcn05-django-https.entrypoints=websecure
+        - traefik.http.routers.spcn05-django-https.rule=Host("spcn05-django.xops.ipv9.me")
+        - traefik.http.routers.spcn05-django-https.tls.certresolver=default
+        - traefik.http.services.spcn05-django.loadbalancer.server.port=8000
+         
+volumes:
+  app:
+
+networks:
+  webproxy:
+    external: true

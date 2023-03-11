@@ -162,5 +162,6 @@ docker stack deploy -c portainer-agent-stack.yml portainer
 ![image](https://user-images.githubusercontent.com/109062980/224478785-52b07259-8a83-4f58-9258-54e95152a509.png)
 
 4. ทำการ deploy stack
+![image](https://user-images.githubusercontent.com/109062980/224479246-3c6a35a3-8f92-45da-b95d-cd70bc8a5873.png)
 
 5. ตรวจสอบว่าทำการ deply ได้ไหมที่ลิ้งค์ https://spcn05-django.xops.ipv9.me/

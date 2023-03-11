@@ -111,6 +111,8 @@ docker stack deploy -c portainer-agent-stack.yml portainer
     ```
 
 3. สร้าง image ใหม่โดยใช้ image ตัวเดิม
+![image](https://user-images.githubusercontent.com/109062980/224478761-bcd976a2-af33-477a-bb35-fe123a4ab5b6.png)
+
     ```
     docker tag swarm02-web-django:latest centurynine/swarm02-web-django:0311
     ```
@@ -119,6 +121,7 @@ docker stack deploy -c portainer-agent-stack.yml portainer
     ```
     docker push centurynine/swarm02-web-django:0311
     ```
+![image](https://user-images.githubusercontent.com/109062980/224478839-2b88fc0a-9143-424f-a7ef-5cb1347362cb.png)
 
 # Portainer rev-proxy deploy stack
 1. เข้าไปที่หน้าเว็บ https://portainer.ipv9.me
@@ -156,6 +159,7 @@ docker stack deploy -c portainer-agent-stack.yml portainer
 
 3. กำหนด environment variables 
     - APPNAME = spcn05-django
+![image](https://user-images.githubusercontent.com/109062980/224478785-52b07259-8a83-4f58-9258-54e95152a509.png)
 
 4. ทำการ deploy stack
 

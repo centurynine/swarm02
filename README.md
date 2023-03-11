@@ -3,3 +3,6 @@
 
 # Wakatime
 - https://wakatime.com/@spcn05/projects/acotlctecj
+
+# Revert proxy
+- https://spcn05-django.xops.ipv9.me/

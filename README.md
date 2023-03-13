@@ -101,6 +101,20 @@ docker stack deploy -c portainer-agent-stack.yml portainer
 
 2. ตรวจสอบการใช้งานโดยเข้าไปที่ http://swarmpit.cpedemo.local/
 
+# Build image
+1. ทำการ Clone ไฟล์จาก github url: https://github.com/docker/awesome-compose/tree/master/django มาเก็บไว้ในโฟลเดอร์ swarm02
+
+2. ใช้คำสั่ง 
+    ```
+    docker compose up
+    ```
+ - เพื่อทำการสร้าง image ขึ้นมา
+
+3. เช็คว่า image ได้ถูกสร้างขึ้นมาและเปิดใช้งานได้หรือไม่ด้วยคำสั่ง
+    ```
+    docker ps
+    ```
+    
 # Docker hub images
 1. ทำการล็อกอินบัญชี docker ที่ node
     ```
